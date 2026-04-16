@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCheckCircle } from 'react-icons/fa';
-import heroImage from 'C:/Users/Prasanna Dantuluri/.gemini/antigravity/brain/5aa5c8e0-02de-42e3-8adb-b4d0ef64e72f/hero_lawn_1776296952651.png';
+const heroImage = '/hero_lawn.png';
 
 const Hero = () => {
   return (

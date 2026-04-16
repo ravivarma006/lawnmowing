@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 
-import beforeImage from 'C:/Users/Prasanna Dantuluri/.gemini/antigravity/brain/5aa5c8e0-02de-42e3-8adb-b4d0ef64e72f/before_same_house_1776297801839.png';
-import afterImage from 'C:/Users/Prasanna Dantuluri/.gemini/antigravity/brain/5aa5c8e0-02de-42e3-8adb-b4d0ef64e72f/after_lawn_1776296995003.png';
+const beforeImage = '/before_lawn.png';
+const afterImage = '/after_lawn.png';
 
 const BeforeAfter = () => {
   const [sliderPosition, setSliderPosition] = useState(50);
