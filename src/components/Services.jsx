@@ -123,11 +123,7 @@ const Services = () => {
                 {service.description}
               </p>
              
-              <div className="mt-6">
-                <a href="#contact" className="text-brand font-semibold hover:text-brand-dark flex items-center gap-2 group-hover:gap-3 transition-all">
-                  Learn more <span className="text-xl">→</span>
-                </a>
-              </div>
+
             </motion.div>
           ))}
           
