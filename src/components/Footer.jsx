@@ -9,8 +9,8 @@ const Footer = () => {
           
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <img src="/viishvadharagrouplogo.png" alt="VishvaDhara Group Logo" className="h-8 w-auto object-contain" />
-              <span className="text-xl font-bold text-white tracking-tight">VishvaDhara Group</span>
+              <img src="/viishvadharagrouplogo.png" alt="VISHVADHARA GROUP Logo" className="h-8 w-auto object-contain" />
+              <span className="text-xl font-bold text-white tracking-tight">VISHVADHARA GROUP</span>
             </div>
             <p className="text-sm">
               Professional, reliable, and premium lawn and garden care services dedicated to creating green paradises.
@@ -55,7 +55,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
-          <p>&copy; {new Date().getFullYear()} VishvaDhara Group. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} VISHVADHARA GROUP. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <a href="#" className="hover:text-white">Privacy Policy</a>
             <a href="#" className="hover:text-white">Terms of Service</a>
