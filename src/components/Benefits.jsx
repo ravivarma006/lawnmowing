@@ -75,7 +75,7 @@ const Benefits = () => {
                 }}
                 className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 hover:bg-white/20 transition-colors"
               >
-                <div className="text-5xl font-black text-white/20 mb-4">{benefit.number}</div>
+                <div className="text-5xl font-black text-white mb-4">{benefit.number}</div>
                 <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
                 <p className="text-white/80 leading-relaxed text-sm">
                   {benefit.description}
