@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaTractor, FaSeedling, FaCut, FaBug, FaBroom } from 'react-icons/fa';
+import { FaTractor, FaSeedling, FaCut, FaBug, FaBroom, FaTh, FaTrash, FaTools } from 'react-icons/fa';
 
 const services = [
   {
@@ -37,6 +37,27 @@ const services = [
     description: 'Seasonal cleanups including leaf removal, debris clearing, and preparing your landscape for the heavy weather changes.',
     icon: <FaBroom className="w-8 h-8 text-white" />,
     color: 'from-green-500 to-green-800',
+  },
+  {
+    id: 6,
+    title: 'Turf Laying',
+    description: 'Instant green results with professional turf installation. We prepare the soil and lay premium quality grass for an immediate lawn transformation.',
+    icon: <FaTh className="w-8 h-8 text-white" />,
+    color: 'from-green-600 to-green-900',
+  },
+  {
+    id: 7,
+    title: 'Rubbish Removal',
+    description: 'Efficient clearing of garden waste and general outdoor debris. We leave your property clean and tidy, disposing of all waste responsibly.',
+    icon: <FaTrash className="w-8 h-8 text-white" />,
+    color: 'from-gray-400 to-gray-600',
+  },
+  {
+    id: 8,
+    title: 'Gutter Cleaning',
+    description: 'Safe and thorough gutter cleaning for single-storey homes. Prevent water damage and blockages with our reliable maintenance service.',
+    icon: <FaTools className="w-8 h-8 text-white" />,
+    color: 'from-blue-400 to-blue-600',
   }
 ];
 

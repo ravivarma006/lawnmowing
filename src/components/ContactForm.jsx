@@ -115,6 +115,9 @@ const ContactForm = () => {
                       <option value="garden-maintenance">Garden Maintenance</option>
                       <option value="hedge-trimming">Hedge Trimming</option>
                       <option value="full-cleanup">Full Yard Cleanup</option>
+                      <option value="turf-laying">Turf Laying</option>
+                      <option value="rubbish-removal">Rubbish Removal</option>
+                      <option value="gutter-cleaning">Gutter Cleaning (Single Storey)</option>
                     </select>
                   </div>
                 </div>
