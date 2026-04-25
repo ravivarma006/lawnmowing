@@ -9,8 +9,8 @@ const Footer = () => {
           
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <img src="/viishvadharagrouplogo.png" alt="VISHVADHARA GROUP Logo" className="h-8 w-auto object-contain" />
-              <span className="text-xl font-bold text-white tracking-tight">VISHVADHARA GROUP</span>
+              <img src="/viishvadharagrouplogo.png" alt="VISHVADHARA GROUP Logo" className="h-12 w-auto object-contain" />
+              <span className="text-2xl font-bold text-white tracking-tight">VISHVADHARA GROUP</span>
             </div>
             <p className="text-sm">
               Professional, reliable, and premium lawn and garden care services dedicated to creating green paradises.

@@ -28,8 +28,8 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo(0,0)}>
-            <img src="/viishvadharagrouplogo.png" alt="VISHVADHARA GROUP Logo" className="h-10 w-auto object-contain" />
-            <span className={`text-xl font-bold tracking-tight ${isScrolled ? 'text-gray-900' : 'text-white text-shadow'}`}>
+            <img src="/viishvadharagrouplogo.png" alt="VISHVADHARA GROUP Logo" className="h-14 w-auto object-contain" />
+            <span className={`text-2xl font-bold tracking-tight ${isScrolled ? 'text-gray-900' : 'text-white text-shadow'}`}>
               VISHVADHARA GROUP
             </span>
           </div>
