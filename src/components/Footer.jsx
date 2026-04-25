@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLeaf } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -8,9 +8,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           
           <div className="col-span-1 md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <FaLeaf className="w-6 h-6 text-brand" />
-              <span className="text-xl font-bold text-white tracking-tight">Bharat Lawn Care</span>
+            <div className="flex items-center gap-3 mb-4">
+              <img src="/viishvadharagrouplogo.png" alt="VishvaDhara Group Logo" className="h-8 w-auto object-contain" />
+              <span className="text-xl font-bold text-white tracking-tight">VishvaDhara Group</span>
             </div>
             <p className="text-sm">
               Professional, reliable, and premium lawn and garden care services dedicated to creating green paradises.
@@ -55,7 +55,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
-          <p>&copy; {new Date().getFullYear()} Bharat Lawn Care. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} VishvaDhara Group. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <a href="#" className="hover:text-white">Privacy Policy</a>
             <a href="#" className="hover:text-white">Terms of Service</a>

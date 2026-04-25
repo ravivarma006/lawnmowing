@@ -6,7 +6,7 @@ const testimonials = [
     id: 1,
     name: 'Sarah Johnson',
     role: 'Homeowner',
-    content: 'Bharat Lawn Care completely transformed my backyard. They are punctual, professional, and the results are stunning. Highly recommended!',
+    content: 'VishvaDhara Group completely transformed my backyard. They are punctual, professional, and the results are stunning. Highly recommended!',
     image: 'https://i.pravatar.cc/150?img=47'
   },
   {

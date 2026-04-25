@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi';
-import { FaLeaf } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,12 +27,10 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           
-          <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo(0,0)}>
-            <div className="bg-brand text-white p-2 rounded-xl shadow-lg">
-              <FaLeaf className="w-6 h-6" />
-            </div>
+          <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo(0,0)}>
+            <img src="/viishvadharagrouplogo.png" alt="VishvaDhara Group Logo" className="h-10 w-auto object-contain" />
             <span className={`text-xl font-bold tracking-tight ${isScrolled ? 'text-gray-900' : 'text-white text-shadow'}`}>
-              Bharat Lawn Care
+              VishvaDhara Group
             </span>
           </div>
 
