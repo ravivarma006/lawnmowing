@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
 
 const Navbar = () => {
@@ -44,12 +45,12 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <a 
-              href="#contact" 
+            <Link 
+              to="/quote" 
               className="bg-brand hover:bg-brand-light transition-colors text-white px-5 py-2.5 rounded-full font-medium shadow-md shadow-brand/30"
             >
               Get Free Quote
-            </a>
+            </Link>
           </div>
 
           <div className="md:hidden flex items-center">
@@ -83,13 +84,13 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
-              <a 
-                href="#contact"
+              <Link 
+                to="/quote"
                 onClick={() => setMobileMenuOpen(false)} 
                 className="mt-4 block w-full text-center bg-brand text-white px-5 py-3 rounded-full font-medium shadow-md"
               >
                 Get Free Quote
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}
