@@ -28,11 +28,20 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           
-          <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo(0,0)}>
-            <img src="/viishvadharagrouplogo.png" alt="VISHVADHARA GROUP Logo" className="h-14 w-auto object-contain" />
-            <span className={`text-2xl font-bold tracking-tight ${isScrolled ? 'text-gray-900' : 'text-white text-shadow'}`}>
-              VISHVADHARA GROUP
-            </span>
+          <div className="flex items-center gap-2 cursor-pointer flex-shrink-0" onClick={() => window.scrollTo(0,0)}>
+            <img 
+              src="/Vishvadharalogo.png" 
+              alt="VISHVADHARA GROUP Logo" 
+              className={`h-16 w-auto object-contain flex-shrink-0 transition-all duration-300 ${isScrolled ? '' : 'brightness-0 invert opacity-90 drop-shadow-lg'}`} 
+            />
+            <div className="flex flex-col leading-tight">
+              <span className={`text-sm sm:text-base md:text-lg font-bold tracking-tight whitespace-nowrap ${isScrolled ? 'text-gray-900' : 'text-white text-shadow'}`}>
+                VISHVADHARA GROUP
+              </span>
+              <span className={`text-[9px] sm:text-[10px] md:text-xs font-medium tracking-wide whitespace-nowrap ${isScrolled ? 'text-gray-500' : 'text-white/80'}`}>
+                Lawns, Gardens and Property Maintenance
+              </span>
+            </div>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">

@@ -217,9 +217,9 @@ const QuotePage = () => {
         className="flex items-center gap-3 mb-8 relative z-10"
       >
         <img
-          src="/viishvadharagrouplogo.png"
+          src="/Vishvadharalogo.png"
           alt="VISHVADHARA GROUP Logo"
-          className="h-12 w-auto object-contain drop-shadow-md"
+          className="h-20 w-auto object-contain brightness-0 invert opacity-90 drop-shadow-md"
         />
         <span className="text-xl font-bold text-white tracking-tight drop-shadow">
           VISHVADHARA GROUP

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaTractor, FaSeedling, FaCut, FaBug, FaBroom, FaTh, FaTrash, FaTools } from 'react-icons/fa';
+import { FaTractor, FaSeedling, FaCut, FaBug, FaBroom, FaTh, FaTrash, FaTools, FaCalendarAlt, FaTint, FaClipboardList } from 'react-icons/fa';
 
 const services = [
   {
@@ -58,6 +58,27 @@ const services = [
     description: 'Safe and thorough gutter cleaning for single-storey homes. Prevent water damage and blockages with our reliable maintenance service.',
     icon: <FaTools className="w-8 h-8 text-white" />,
     color: 'from-blue-400 to-blue-600',
+  },
+  {
+    id: 9,
+    title: 'Monthly Package',
+    description: 'Our holistic care plan for long-term clients — one fixed monthly amount covers regular maintenance, seasonal soil feeding, weed health checks, garden planting and pruning, plus priority service when we are in your area. No surprises, no stress.',
+    icon: <FaCalendarAlt className="w-8 h-8 text-white" />,
+    color: 'from-violet-400 to-violet-700',
+  },
+  {
+    id: 10,
+    title: 'Pressure Washing',
+    description: "Powerful high-pressure cleaning for driveways, paths, patios, and hard surfaces. Remove dirt, moss, and grime to restore your property's kerb appeal.",
+    icon: <FaTint className="w-8 h-8 text-white" />,
+    color: 'from-cyan-400 to-cyan-700',
+  },
+  {
+    id: 11,
+    title: 'Property Audit',
+    description: 'A detailed assessment of your entire outdoor property. We identify maintenance priorities and deliver a clear action plan to keep your grounds in peak condition.',
+    icon: <FaClipboardList className="w-8 h-8 text-white" />,
+    color: 'from-amber-400 to-amber-700',
   }
 ];
 

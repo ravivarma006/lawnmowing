@@ -11,6 +11,8 @@ import Contact from './components/Contact';
 
 import Footer from './components/Footer';
 import QuotePage from './pages/QuotePage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsPage from './pages/TermsPage';
 
 // ── Landing Page ──────────────────────────────────────────────────────────────
 const LandingPage = () => (
@@ -35,8 +37,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/"      element={<LandingPage />} />
-        <Route path="/quote" element={<QuotePage />}   />
+        <Route path="/"              element={<LandingPage />} />
+        <Route path="/quote"         element={<QuotePage />}   />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path="/terms"          element={<TermsPage />} />
       </Routes>
     </BrowserRouter>
   );

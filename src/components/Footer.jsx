@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
@@ -9,7 +10,7 @@ const Footer = () => {
           
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <img src="/viishvadharagrouplogo.png" alt="VISHVADHARA GROUP Logo" className="h-12 w-auto object-contain" />
+              <img src="/Vishvadharalogo.png" alt="VISHVADHARA GROUP Logo" className="h-20 w-auto object-contain brightness-0 invert opacity-90" />
               <span className="text-2xl font-bold text-white tracking-tight">VISHVADHARA GROUP</span>
             </div>
             <p className="text-sm">
@@ -57,8 +58,8 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
           <p>&copy; {new Date().getFullYear()} VISHVADHARA GROUP. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white">Privacy Policy</a>
-            <a href="#" className="hover:text-white">Terms of Service</a>
+            <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-white transition-colors">Terms &amp; Conditions</Link>
           </div>
         </div>
       </div>
