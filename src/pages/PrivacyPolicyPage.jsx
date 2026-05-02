@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaShieldAlt, FaArrowLeft } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 
 const LAST_UPDATED = '1 May 2025';
 const COMPANY = 'Vishvadhara Group';
@@ -37,11 +38,15 @@ const toc = [
 const PrivacyPolicyPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = 'Privacy Policy | Vishvadhara Group';
   }, []);
 
   return (
     <div className="font-sans antialiased text-gray-900 bg-gray-50 min-h-screen">
+      <SEO 
+        title="Privacy Policy - VISHVADHARA GROUP"
+        description="Learn how VISHVADHARA GROUP collects, uses, and protects your personal information in accordance with the Australian Privacy Principles."
+        canonical="/privacy-policy"
+      />
       <Navbar />
 
       {/* Hero Banner */}

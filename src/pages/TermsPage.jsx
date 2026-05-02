@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaFileContract, FaArrowLeft } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 
 const LAST_UPDATED = '1 May 2025';
 const COMPANY = 'Vishvadhara Group';
@@ -39,11 +40,15 @@ const toc = [
 const TermsPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = 'Terms & Conditions | Vishvadhara Group';
   }, []);
 
   return (
     <div className="font-sans antialiased text-gray-900 bg-gray-50 min-h-screen">
+      <SEO 
+        title="Terms & Conditions - VISHVADHARA GROUP"
+        description="Read the terms and conditions for VISHVADHARA GROUP's lawn mowing and garden maintenance services in Sydney, Australia."
+        canonical="/terms"
+      />
       <Navbar />
 
       {/* Hero Banner */}

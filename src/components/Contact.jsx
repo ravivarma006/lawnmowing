@@ -7,8 +7,8 @@ const contactDetails = [
   {
     icon: FaPhoneAlt,
     label: 'Phone',
-    value: '+61 2 1234 5678',
-    href: 'tel:+61212345678',
+    value: '0415 687 060',
+    href: 'tel:0415687060',
     color: 'bg-green-500/20 text-green-400',
   },
   {

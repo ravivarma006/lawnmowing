@@ -79,7 +79,10 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
-          <p>&copy; {new Date().getFullYear()} VISHVADHARA GROUP. All rights reserved.</p>
+          <div className="flex flex-col items-center md:items-start text-center md:text-left gap-1">
+            <p>&copy; {new Date().getFullYear()} VISHVADHARA GROUP. All rights reserved.</p>
+            <p className="text-xs text-gray-500">Website designed and developed by <a href="#" className="hover:text-white transition-colors">Astra Digital Solutions (ADS)</a> Sydney Australia</p>
+          </div>
           <div className="flex gap-4 mt-4 md:mt-0">
             <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-white transition-colors">Terms &amp; Conditions</Link>

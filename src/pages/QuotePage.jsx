@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaArrowLeft } from 'react-icons/fa';
+import SEO from '../components/SEO';
 
 const QuotePage = () => {
   useEffect(() => {
@@ -26,6 +27,11 @@ const QuotePage = () => {
       className="min-h-screen flex flex-col items-center justify-start px-4 py-10"
       style={{ background: 'linear-gradient(135deg, #064e3b 0%, #065f46 40%, #047857 70%, #10b981 100%)' }}
     >
+      <SEO 
+        title="Get a Free Quote - Lawn Mowing & Garden Care Sydney"
+        description="Ready to transform your lawn? Request a free, no-obligation quote for professional lawn mowing and garden maintenance in Sydney. Fast 24-hour response."
+        canonical="/quote"
+      />
       {/* Decorative blobs */}
       <div className="fixed top-0 left-0 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
       <div className="fixed bottom-0 right-0 w-[500px] h-[500px] bg-emerald-300/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3 pointer-events-none" />

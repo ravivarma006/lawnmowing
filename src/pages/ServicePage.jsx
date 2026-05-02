@@ -5,64 +5,49 @@ import { servicesData } from '../data/servicesData';
 import { FaCheckCircle, FaStar, FaPhoneAlt, FaChevronRight, FaRegCalendarCheck } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.1 }
-  }
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
-    y: 0,
-    transition: { type: 'spring', stiffness: 100 }
-  }
-};
+import SEO from '../components/SEO';
 
 const ServicePage = () => {
   const { slug } = useParams();
   const service = servicesData[slug];
 
   useEffect(() => {
-    if (service) {
-      // 1. Set Title
-      document.title = service.meta.title;
-      
-      // 2. Set Meta Description
-      let metaDesc = document.querySelector('meta[name="description"]');
-      if (!metaDesc) {
-        metaDesc = document.createElement('meta');
-        metaDesc.name = 'description';
-        document.head.appendChild(metaDesc);
-      }
-      metaDesc.content = service.meta.description;
+    window.scrollTo(0, 0);
+  }, [slug]);
 
-      // 3. Inject LocalBusiness + Service JSON-LD Schema
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@type": ["LocalBusiness", "Service"],
-        "name": "Vishvadhara Group",
-        "serviceType": service.serviceName,
+  // If slug doesn't exist in data, redirect to home or 404
+  if (!service) {
+    return <Navigate to="/" replace />;
+  }
+
+  const combinedSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": service.serviceName,
         "description": service.meta.description,
         "provider": {
           "@type": "LocalBusiness",
-          "name": "Vishvadhara Group"
+          "name": "VISHVADHARA GROUP",
+          "image": "https://bharatlawncare.vercel.app/viishvadharagrouplogo.png",
+          "telephone": "0415687060",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Sydney Area",
+            "addressLocality": "Sydney",
+            "addressRegion": "NSW",
+            "postalCode": "2000",
+            "addressCountry": "AU"
+          }
         },
         "areaServed": [
           { "@type": "City", "name": "Sydney" },
           { "@type": "City", "name": "Parramatta" },
-          { "@type": "City", "name": "Blacktown" },
-          { "@type": "City", "name": "Castle Hill" }
+          { "@type": "City", "name": "Blacktown" }
         ]
-      };
-
-      // 4. Inject FAQ Schema
-      const faqSchemaData = {
-        "@context": "https://schema.org",
+      },
+      {
         "@type": "FAQPage",
         "mainEntity": service.faqs.items.map(faq => ({
           "@type": "Question",
@@ -72,35 +57,18 @@ const ServicePage = () => {
             "text": faq.answer
           }
         }))
-      };
-
-      // Create or update script tags for JSON-LD
-      const injectSchema = (id, data) => {
-        let script = document.getElementById(id);
-        if (!script) {
-          script = document.createElement('script');
-          script.id = id;
-          script.type = 'application/ld+json';
-          document.head.appendChild(script);
-        }
-        script.textContent = JSON.stringify(data);
-      };
-
-      injectSchema('schema-local-business', schemaData);
-      injectSchema('schema-faq', faqSchemaData);
-      
-      // Scroll to top on load
-      window.scrollTo(0, 0);
-    }
-  }, [service, slug]);
-
-  // If slug doesn't exist in data, redirect to home or 404
-  if (!service) {
-    return <Navigate to="/" replace />;
-  }
+      }
+    ]
+  };
 
   return (
     <div className="font-sans antialiased text-gray-900 bg-gray-50">
+      <SEO 
+        title={service.meta.title.replace(' | Vishvadhara Group', '')}
+        description={service.meta.description}
+        canonical={`/services/${slug}`}
+        schema={combinedSchema}
+      />
       <Navbar />
       <main> 
         
@@ -136,7 +104,7 @@ const ServicePage = () => {
               <Link to="/quote" className="bg-brand hover:bg-brand-light text-white px-8 py-4 rounded-full font-bold text-lg transition-colors shadow-lg shadow-brand/30 flex items-center gap-2">
                 Get Free Quote <FaChevronRight className="w-4 h-4" />
               </Link>
-              <a href="tel:0485560093" className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg transition-colors flex items-center gap-2">
+              <a href="tel:0415687060" className="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg transition-colors flex items-center gap-2">
                 <FaPhoneAlt className="w-4 h-4" /> Call Now
               </a>
             </motion.div>
@@ -330,7 +298,7 @@ const ServicePage = () => {
               <Link to="/quote" className="bg-white text-brand px-10 py-4 rounded-full font-bold text-xl shadow-xl hover:bg-gray-50 transition-colors w-full sm:w-auto">
                 {service.cta.button1}
               </Link>
-              <a href="tel:0485560093" className="border-2 border-white text-white hover:bg-white/10 px-10 py-4 rounded-full font-bold text-xl transition-colors w-full sm:w-auto">
+              <a href="tel:0415687060" className="border-2 border-white text-white hover:bg-white/10 px-10 py-4 rounded-full font-bold text-xl transition-colors w-full sm:w-auto">
                 {service.cta.button2}
               </a>
             </div>
