@@ -31,20 +31,34 @@ const QuotePage = () => {
       <div className="fixed bottom-0 right-0 w-[500px] h-[500px] bg-emerald-300/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3 pointer-events-none" />
       <div className="fixed top-1/2 right-0 w-64 h-64 bg-teal-300/10 rounded-full blur-2xl translate-x-1/2 pointer-events-none" />
 
-      {/* Brand Header */}
+      {/* Top Navigation & Brand Header */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="flex items-center gap-3 mb-8 relative z-10"
+        className="w-full max-w-xl relative z-10 mb-8 flex flex-col items-center"
       >
-        <img
-          src="/Vishvadharalogo.png"
-          alt="VISHVADHARA GROUP Logo"
-          className="h-20 w-auto object-contain brightness-0 invert opacity-90 drop-shadow-md"
-        />
-        <span className="text-xl font-bold text-white tracking-tight drop-shadow">
-          VISHVADHARA GROUP
-        </span>
+        <div className="w-full flex justify-start mb-2">
+          <Link to="/" className="inline-flex items-center gap-1.5 text-white/80 hover:text-white transition-colors text-sm font-medium bg-black/10 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <FaArrowLeft className="w-3 h-3" />
+            Back to Home
+          </Link>
+        </div>
+        
+        <Link to="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
+          <img
+            src="/Vishvadharalogo.png"
+            alt="VISHVADHARA GROUP Logo"
+            className="h-16 md:h-20 w-auto object-contain brightness-0 invert opacity-90 drop-shadow-md"
+          />
+          <div className="flex flex-col leading-tight">
+            <span className="text-lg md:text-xl font-bold text-white tracking-tight drop-shadow">
+              VISHVADHARA GROUP
+            </span>
+            <span className="text-[10px] md:text-xs font-medium tracking-wide text-white/80 drop-shadow mt-0.5">
+              Lawns, Gardens and Property Maintenance
+            </span>
+          </div>
+        </Link>
       </motion.div>
 
       {/* Form Card — WHITE */}
