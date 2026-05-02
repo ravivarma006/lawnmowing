@@ -29,11 +29,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           
           <div className="col-span-1 md:col-span-1">
-            <Link to="/" onClick={() => window.scrollTo(0,0)} className="flex items-center gap-3 mb-4">
-              <img src="/Vishvadharalogo.png" alt="VISHVADHARA GROUP Logo" className="h-20 w-auto object-contain brightness-0 invert opacity-90" />
-              <span className="text-2xl font-bold text-white tracking-tight">VISHVADHARA GROUP</span>
+            <Link to="/" onClick={() => window.scrollTo(0,0)} className="flex items-center gap-3 mb-4 hover:opacity-90 transition-opacity">
+              <img src="/Vishvadharalogo.png" alt="VISHVADHARA GROUP Logo" className="h-16 md:h-20 w-auto object-contain brightness-0 invert opacity-90" />
+              <div className="flex flex-col leading-tight">
+                <span className="text-xl md:text-2xl font-bold text-white tracking-tight">VISHVADHARA GROUP</span>
+                <span className="text-[11px] md:text-xs font-medium tracking-wide text-gray-400 mt-0.5">Lawns, Gardens and Property Maintenance</span>
+              </div>
             </Link>
-            <p className="text-sm">
+            <p className="text-sm text-gray-400">
               Professional, reliable, and premium lawn and garden care services dedicated to creating green paradises.
             </p>
           </div>
