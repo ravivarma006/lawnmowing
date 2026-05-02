@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { FaTractor, FaSeedling, FaCut, FaBug, FaBroom, FaTh, FaTrash, FaTools, FaCalendarAlt, FaTint, FaClipboardList } from 'react-icons/fa';
 
 const services = [
@@ -127,25 +128,27 @@ const Services = () => {
           viewport={{ once: true, margin: "-50px" }}
         >
           {services.map((service) => (
-            <motion.div 
-              key={service.id} 
-              variants={itemVariants}
-              whileHover={{ y: -10, scale: 1.02 }}
-              className="glass bg-white/80 rounded-3xl p-8 hover:shadow-xl transition-all duration-300 border border-white group relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              
-              <div className={`w-16 h-16 rounded-2xl mb-6 shadow-lg flex items-center justify-center bg-gradient-to-br ${service.color} transform group-hover:rotate-6 transition-transform`}>
-                {service.icon}
-              </div>
-              
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">{service.title}</h3>
-              <p className="text-gray-600 leading-relaxed">
-                {service.description}
-              </p>
-             
-
-            </motion.div>
+            <Link key={service.id} to={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="block">
+              <motion.div 
+                variants={itemVariants}
+                whileHover={{ y: -10, scale: 1.02 }}
+                className="glass bg-white/80 rounded-3xl p-8 hover:shadow-xl transition-all duration-300 border border-white group relative overflow-hidden h-full"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                
+                <div className={`w-16 h-16 rounded-2xl mb-6 shadow-lg flex items-center justify-center bg-gradient-to-br ${service.color} transform group-hover:rotate-6 transition-transform`}>
+                  {service.icon}
+                </div>
+                
+                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-brand transition-colors">{service.title}</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {service.description}
+                </p>
+                <div className="mt-6 flex items-center text-brand font-semibold group-hover:underline">
+                  Learn more &rarr;
+                </div>
+              </motion.div>
+            </Link>
           ))}
           
           {/* Custom CTA Card within grid */}

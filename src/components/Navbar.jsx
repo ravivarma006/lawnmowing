@@ -1,11 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHome = location.pathname === '/';
+
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    if (isHome) {
+      if (href === '#home') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    } else {
+      navigate('/' + href);
+      // Note: React Router will navigate to / and the browser will try to jump to the hash
+    }
+    setMobileMenuOpen(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,7 +49,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           
-          <div className="flex items-center gap-2 cursor-pointer flex-shrink-0" onClick={() => window.scrollTo(0,0)}>
+          <Link to="/" className="flex items-center gap-2 cursor-pointer flex-shrink-0" onClick={() => window.scrollTo(0,0)}>
             <img 
               src="/Vishvadharalogo.png" 
               alt="VISHVADHARA GROUP Logo" 
@@ -42,13 +63,14 @@ const Navbar = () => {
                 Lawns, Gardens and Property Maintenance
               </span>
             </div>
-          </div>
+          </Link>
 
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <a 
                 key={link.name} 
-                href={link.href} 
+                href={isHome ? link.href : '/' + link.href} 
+                onClick={(e) => handleNavClick(e, link.href)}
                 className={`font-medium transition-colors hover:text-brand ${isScrolled ? 'text-gray-600' : 'text-white/90 hover:text-white'}`}
               >
                 {link.name}
@@ -86,8 +108,8 @@ const Navbar = () => {
               {navLinks.map((link) => (
                 <a 
                   key={link.name} 
-                  href={link.href} 
-                  onClick={() => setMobileMenuOpen(false)}
+                  href={isHome ? link.href : '/' + link.href}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   className="block px-3 py-3 rounded-md text-base font-medium text-gray-800 hover:text-brand hover:bg-white/50"
                 >
                   {link.name}

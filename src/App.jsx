@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import QuotePage from './pages/QuotePage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsPage from './pages/TermsPage';
+import ServicePage from './pages/ServicePage';
 
 // ── Landing Page ──────────────────────────────────────────────────────────────
 const LandingPage = () => (
@@ -38,6 +39,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/"              element={<LandingPage />} />
+        <Route path="/services/:slug" element={<ServicePage />} />
         <Route path="/quote"         element={<QuotePage />}   />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         <Route path="/terms"          element={<TermsPage />} />
