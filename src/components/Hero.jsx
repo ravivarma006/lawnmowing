@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCheckCircle } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 const heroImage = '/hero_lawn.png';
 
 const Hero = () => {
@@ -30,9 +31,9 @@ const Hero = () => {
           </p>
           
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <a href="https://bharatlawncare.vercel.app/quote" className="px-8 py-4 bg-brand hover:bg-brand-light text-white rounded-full font-bold text-lg shadow-lg shadow-brand/40 transition-transform transform hover:scale-105 text-center">
+            <Link to="/quote" className="px-8 py-4 bg-brand hover:bg-brand-light text-white rounded-full font-bold text-lg shadow-lg shadow-brand/40 transition-transform transform hover:scale-105 text-center">
               Get Free Quote
-            </a>
+            </Link>
             <a href="#services" className="px-8 py-4 glass text-white rounded-full font-bold text-lg hover:bg-white/20 transition-colors text-center shadow-lg">
               Our Services
             </a>
