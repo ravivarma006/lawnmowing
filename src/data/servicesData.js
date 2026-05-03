@@ -1221,3 +1221,9 @@ export const servicesData = {
     }
   }
 };
+
+// Flat list used by Navbar dropdown — keeps Navbar import lightweight
+export const servicesList = Object.entries(servicesData).map(([slug, s]) => ({
+  name: s.serviceName,
+  slug,
+}));
