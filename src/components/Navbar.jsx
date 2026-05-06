@@ -46,17 +46,20 @@ const Navbar = () => {
   // ── Smooth-scroll helper (homepage anchor links) ──────────────────────────────
   const handleNavClick = (e, href) => {
     e.preventDefault();
+    // Close mobile menu first, then scroll after animation completes
+    setMobileMenuOpen(false);
     if (isHome) {
-      if (href === '#home') {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else {
-        const target = document.querySelector(href);
-        if (target) target.scrollIntoView({ behavior: 'smooth' });
-      }
+      setTimeout(() => {
+        if (href === '#home') {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          const target = document.querySelector(href);
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 350); // wait for mobile menu close animation to finish
     } else {
       navigate('/' + href);
     }
-    setMobileMenuOpen(false);
   };
 
   // ── Homepage-only section links (hidden on service pages) ─────────────────────
