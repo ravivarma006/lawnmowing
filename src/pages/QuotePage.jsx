@@ -92,14 +92,14 @@ const QuotePage = () => {
           {/* Tally Embed Container */}
           <div className="px-4 md:px-8">
             <iframe 
-              data-tally-src="https://tally.so/embed/VLo576?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+              data-tally-src="https://tally.so/embed/Mev8pl?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
               loading="lazy" 
               width="100%" 
-              height="586" 
+              height="200" 
               frameBorder="0" 
               marginHeight="0" 
               marginWidth="0" 
-              title="Get Your FREE Quote"
+              title="Get your free quote"
               className="w-full"
             ></iframe>
           </div>
