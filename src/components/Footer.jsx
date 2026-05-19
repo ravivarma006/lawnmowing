@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   const location = useLocation();
@@ -64,13 +64,10 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-4">Follow Us</h4>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand text-white transition-colors">
+              <a href="https://www.facebook.com/share/1FvVPEP3YD/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand text-white transition-colors">
                 <FaFacebookF />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand text-white transition-colors">
-                <FaTwitter />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand text-white transition-colors">
+              <a href="https://www.instagram.com/vishvadharagroup/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand text-white transition-colors">
                 <FaInstagram />
               </a>
             </div>
